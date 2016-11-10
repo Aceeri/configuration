@@ -1,6 +1,7 @@
 
 set nocompatible
-set rtp+=~/.vim/
+set rtp+=~/.vim/ " add ~/.vim/ to vim runtime (easier than using gvim's path)
+
 execute pathogen#infect()
 filetype plugin indent on
 
@@ -13,6 +14,9 @@ colorscheme solarized
 set nu
 set rnu
 set backspace=indent,eol,start
+set incsearch
+set wildmenu
+set ruler
 
 " remaps
 imap jk <Esc>
