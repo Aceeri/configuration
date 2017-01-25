@@ -1,14 +1,7 @@
 
 set nocompatible
+let &shell='cmd.exe'
 set rtp+=~/.vim/ " add ~/.vim/ to vim runtime (easier than using gvim's path)
-
-execute pathogen#infect()
-filetype plugin indent on
-
-" appearance
-syntax on
-set background=dark
-colorscheme solarized
 
 " settings
 set nu
@@ -17,7 +10,22 @@ set backspace=indent,eol,start
 set incsearch
 set wildmenu
 set ruler
+set clipboard+=unnamed
+set paste
+set go+=a
 
 " remaps
-imap jk <Esc>
+
+call plug#begin("~/.vim/plugged")
+
+" vundle
+Plug 'rust-lang/rust.vim'
+Plug 'altercation/vim-colors-solarized'
+
+call plug#end()
+
+" appearance
+syntax on
+set background=dark
+colorscheme solarized
 
